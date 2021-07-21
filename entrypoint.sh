@@ -11,8 +11,8 @@ mkdir -vp "$INSTALL_DIR"
 CURL_FLAGS=("-L")
 [ -t 1 ] && CURL_FLAGS+=("-#") || CURL_FLAGS+=("-sS")
 
-export PATH="$PATH":"$REZ_PYTHON_ROOT"/bin:"$REZ_GIT_ROOT":bin
-pip3 install pyparsing
+export PATH="$PATH":"$REZ_PYTHON_ROOT"/bin:"$REZ_GIT_ROOT"/bin
+"$REZ_PYTHON_ROOT"/bin/python3 -m pip install pyparsing
 echo "               git cloning: $URL"
 echo "    into current directory: $(pwd)"
 git clone --branch="$VERSION" "$URL" .
