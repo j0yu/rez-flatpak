@@ -1,4 +1,5 @@
-FROM centos:7
+ARG CENTOS_MAJOR=7
+FROM centos:$CENTOS_MAJOR
 
 RUN yum install -y yum-utils make epel-release file \
     && yum-builddep -y flatpak \
