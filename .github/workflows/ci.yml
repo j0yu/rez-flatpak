@@ -70,4 +70,4 @@ jobs:
       - run: rez build --install
         working-directory: ./flatpak
 
-    - run: rez env flatpak -c 'ls -l $REZ_FLATPAK_ROOT/lib/libsotree*.so*'
+      - run: rez env flatpak -- flatpak --help
